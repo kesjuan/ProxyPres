@@ -12,7 +12,7 @@ public class ExpensiveService implements IProxyInterface{
     public int getNumberOfMessages() {
         Random rd = new Random();
         // ! generating random number
-        int num = rd.nextInt();
+        int num = (int) (rd.nextInt() * Math.ceil(rd.nextInt()));
         return num;
     }
     public void deleteMessages(String contactName){
