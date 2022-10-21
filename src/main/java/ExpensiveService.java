@@ -9,15 +9,15 @@ public class ExpensiveService implements IProxyInterface{
     }
 
     @Override
-    public int getNumberOfMessages() {
+    public void getNumberOfMessages() {
         Random rd = new Random();
         // ! generating random number
-        int num = (int) (rd.nextInt() * Math.ceil(rd.nextInt()));
-        return num;
+        int num = (int)  Math.ceil (rd.nextInt());
+        System.out.println("The number of messages you have with " + contactName +" is " + num);
     }
     public void deleteMessages(String contactName){
 
-        for (int i = 0; i < getNumberOfMessages(); i++) {
+        for (int i = 0; i < 35; i++) {
             // ! Filler method just to show proxy can not access it
         }
     }

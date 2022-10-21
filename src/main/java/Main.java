@@ -5,7 +5,8 @@ public class Main {
         IProxyInterface newProxyObject = new ServiceProxy("John");
         // ! initialize the object using the interface and only the proxy methods will be available
         // ? Access original object through proxy object
-        System.out.println(newProxyObject.getNumberOfMessages());
+
+       newProxyObject.getNumberOfMessages();
         //System.out.println(serviceObject.getNumberOfMessages());
     }
 }

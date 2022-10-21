@@ -11,12 +11,12 @@ public class ServiceProxy implements IProxyInterface{
     }
 
     @Override
-    public int getNumberOfMessages() {
+    public void getNumberOfMessages() {
         // * Lazy Initialization
         if(serviceVar == null){
             serviceVar = new ExpensiveService(contactName);
         }
         // * after processing this Passes request to service object
-        return serviceVar.getNumberOfMessages();
+        serviceVar.getNumberOfMessages();
     }
 }
