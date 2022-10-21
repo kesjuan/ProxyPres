@@ -13,7 +13,12 @@ public class ExpensiveService implements IProxyInterface{
         Random rd = new Random();
         // ! generating random number
         int num = (int)  Math.ceil (rd.nextInt());
-        System.out.println("The number of messages you have with " + contactName +" is " + num);
+        if (num < 0){
+            getNumberOfMessages();
+        }
+        if (num > 0) {
+            System.out.println("The number of messages you have with " + contactName + " is " + num);
+        }
     }
     public void deleteMessages(String contactName){
 
